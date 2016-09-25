@@ -1,0 +1,45 @@
+Pour ouvrir une nouvelle fenêtre cmd: start
+
+MongoDB
+use openclassrooms 
+Créer base de données 
+
+db.acteurs.insert({nom:"Johansson", prenom:"Scarlett"}) 
+db.acteurs.insert({nom:"Brocoli", prenom:"Albert"}) 
+Insertion
+
+db.acteurs.find() 
+Afficher les acteurs
+
+
+
+Select data: select grade in restaurants database
+db.restaurants.find({},{grade: 1})
+
+Mongodb
+démarrer mongodb
+ouvrir le cmd, run mongod, ouvrir une autre fenêtre et run mongo
+import file
+mongoimport --db test --collection restaurants --drop --file EcoleMongoDB.txt
+utiliser une base de données (créée ou déjà existente)
+use test
+effacer une base de données
+use test db.dropDatabase()
+effacer une collection
+db.collection.drop()
+montrer les collections
+show collections
+sortir
+exit
+
+
+SQL
+CREATE DATABASE database_name;
+USE database_name;
+connection avec mysql -u root
+sans Password
+Ma configuration est faite avec Wamp
+Apparemment je n'ai pas de password
+mysql -u root  < bat file dans le cmd
+sortir
+\q

@@ -1,0 +1,5 @@
+{"IdEcole": "1", "Nom": "Prepa impossible"}
+{"IdEcole": "2", "Nom": "INSA de Rennes"}
+{"IdEcole": "3", "Nom": "Supelec"}
+{"IdEcole": "4", "Nom": "Ecole des arts et metiers"}
+{"IdEcole": "5", "Nom": "Perdu school"}

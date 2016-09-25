@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TabPane tabClosingPolicy="UNAVAILABLE" tabMinHeight="28.0" tabMinWidth="100.0" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Input">
+               <content>
+                  <VBox>
+                     <children>
+                        <TitledPane animated="false" collapsible="false" prefHeight="150.0" text="Interface">
+                           <content>
+                              <FlowPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="10.0">
+                                 <children>
+                                    <ChoiceBox fx:id="originalXQuery" prefWidth="300.0" />
+                                    <Button fx:id="executeOriginalQuery" mnemonicParsing="false" prefWidth="80.0" text="Execute" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </FlowPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" prefHeight="150.0" text="Mediator">
+                           <content>
+                              <SplitPane dividerPositions="0.5">
+                                 <items>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <FlowPane hgap="10.0" maxHeight="-Infinity" vgap="10.0" BorderPane.alignment="CENTER">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <children>
+                                                <TextField fx:id="mysqlXQuery" prefWidth="240.0" promptText="Splitted xQuery for MySQL Database" />
+                                                <Button fx:id="executeMysqlXQuery" mnemonicParsing="false" prefWidth="80.0" text="Execute" />
+                                             </children>
+                                          </FlowPane>
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <FlowPane hgap="10.0" maxHeight="-Infinity" vgap="10.0" BorderPane.alignment="CENTER">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <children>
+                                                <TextField fx:id="mongoXQuery" prefWidth="240.0" promptText="Splitted xQuery for Mongo Database" />
+                                                <Button fx:id="executeMongoXQuery" mnemonicParsing="false" prefWidth="80.0" text="Execute" />
+                                             </children>
+                                          </FlowPane>
+                                       </center>
+                                    </BorderPane>
+                                 </items>
+                              </SplitPane>
+                           </content>
+                        </TitledPane>
+                        <SplitPane dividerPositions="0.5">
+                           <items>
+                              <TitledPane animated="false" collapsible="false" prefHeight="150.0" text="MySQL Wrapper">
+                                 <content>
+                                    <BorderPane>
+                                       <center>
+                                          <TextField fx:id="mysqlQuery" minWidth="240.0" promptText="Generated MySQL Query" BorderPane.alignment="CENTER" />
+                                       </center>
+                                    </BorderPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" prefHeight="150.0" text="MongoDB Wrapper">
+                                 <content>
+                                    <BorderPane>
+                                       <center>
+                                          <TextField fx:id="mongoQuery" minWidth="240.0" promptText="Generated MongoDB Query" BorderPane.alignment="CENTER" />
+                                       </center>
+                                    </BorderPane>
+                                 </content>
+                              </TitledPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+          <Tab text="Output">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <SplitPane dividerPositions="0.29797979797979796">
+                          <items>
+                              <TitledPane animated="false" collapsible="false" text="MySQL Results">
+                                 <content>
+                                    <TableView fx:id="mysqlTable">
+                  </TableView>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" text="MongoDB Results">
+                                 <content>
+                                    <TableView fx:id="mongoTable">
+                  </TableView>
+                                 </content>
+                              </TitledPane>
+                          </items>
+                        </SplitPane>
+                        <TitledPane animated="false" collapsible="false" text="Merged Results">
+                           <content>
+                              <TableView fx:id="finalTable" />
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
